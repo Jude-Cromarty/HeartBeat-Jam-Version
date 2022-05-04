@@ -540,6 +540,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentHealth: 0
+  Cooldown: 3
+  TimeTill: 0.1
   healthBar: {fileID: 1845978818}
   Delay: 2
   Corresponding_Key: 102
@@ -2012,6 +2014,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentHealth: 0
+  Cooldown: 3
+  TimeTill: 0.1
   healthBar: {fileID: 1845978818}
   Delay: 2
   Corresponding_Key: 101
@@ -2258,6 +2262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentHealth: 0
+  Cooldown: 3
+  TimeTill: 0.1
   healthBar: {fileID: 1845978818}
   Delay: 2
   Corresponding_Key: 114
@@ -2299,13 +2305,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 631886243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f8a6781f3af2d2419802047323d0d24, type: 3}
+  m_Script: {fileID: 11500000, guid: ac47243df82b4084494843b17e5ec55c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  active: 1
-  healthBar: {fileID: 1845978818}
+  GotInput: {fileID: 0}
+  Decay: 1
+  currentHealth: 100
 --- !u!4 &631886245
 Transform:
   m_ObjectHideFlags: 0
@@ -3660,25 +3665,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1414331744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f20f37dd5b8054a4599b5b4f35963b4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0127d5ddb55378c45bbb3fcb6dc84021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHealth: 0
-  healthBar: {fileID: 1845978818}
-  Delay: 2
+  GotInput: 0
   Corresponding_Key: 119
---- !u!114 &1414331752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414331744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a21639397d8a9784b82fc94d9e40399f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1414821171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4560,6 +4551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentHealth: 0
+  Cooldown: 3
+  TimeTill: 0.1
   healthBar: {fileID: 1845978818}
   Delay: 2
   Corresponding_Key: 115
@@ -5269,6 +5262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentHealth: 0
+  Cooldown: 3
+  TimeTill: 0.1
   healthBar: {fileID: 1845978818}
   Delay: 2
   Corresponding_Key: 100
@@ -5506,6 +5501,20 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 5137824292922458029, guid: 9d4e189cce7643947bdc1560cb898e71, type: 3}
   m_PrefabInstance: {fileID: 5137824294211777627}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2094959604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094959601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0127d5ddb55378c45bbb3fcb6dc84021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GotInput: 0
+  Corresponding_Key: 113
 --- !u!164 &2094959607
 AudioReverbFilter:
   m_ObjectHideFlags: 0
@@ -5529,34 +5538,6 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 9
---- !u!114 &2094959608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094959601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f20f37dd5b8054a4599b5b4f35963b4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentHealth: 0
-  healthBar: {fileID: 1845978818}
-  Delay: 3
-  Corresponding_Key: 113
---- !u!114 &2094959609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094959601}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a21639397d8a9784b82fc94d9e40399f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2102622051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5704,6 +5685,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentHealth: 0
+  Cooldown: 3
+  TimeTill: 0.1
   healthBar: {fileID: 1845978818}
   Delay: 2
   Corresponding_Key: 97
